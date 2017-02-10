@@ -1,0 +1,13 @@
+<h1> Drones to be flown today </h1>
+
+<ul>
+  <% drones.forEach((drone) => { %>
+    <li>
+      <%= drone.droneName %>
+      <a href="/drones/<%= drone._id %>">Details</a>
+      <a href="/drones/<%= drone._id %>/edit/">Edit</a>
+      <a href="/drones/<%= drone._id %>/delete/">Delete</a>
+    </li>
+  <%  }) %>
+  <a href="drones/new">New</a><br>
+</ul>
